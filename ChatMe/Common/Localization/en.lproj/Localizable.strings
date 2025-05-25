@@ -1,0 +1,14 @@
+// MARK: - Common
+"continue" = "Continue";
+"sign_in" = "Sign In";
+"sign_up" = "Sign Up";
+"name_title" = "Name";
+"name_ph" = "Enter your name";
+"email_title" = "Email";
+"email_ph" = "Enter your email";
+"password_title" = "Password";
+"password_ph" = "Enter your password";
+"type_ph" = "Type a message...";
+"chats" = "Chats";
+"empty_message" = "Tap to start messaging";
+"no_screenshots_label" = "You cannot take screenshots\nin the app.";
