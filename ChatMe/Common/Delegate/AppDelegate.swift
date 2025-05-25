@@ -1,4 +1,5 @@
 import UIKit
+import IQKeyboardManagerSwift
 
 @main
 final class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -13,6 +14,11 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 // MARK: - Configure
 private extension AppDelegate{
 	func configure() {
+		// - Manager
 		FirebaseManager.shared.configure()
+		
+		// - Keyboard
+		IQKeyboardManager.shared.resignOnTouchOutside = true
+		IQKeyboardManager.shared.keyboardDistance = 10
 	}
 }

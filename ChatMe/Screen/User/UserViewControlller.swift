@@ -1,6 +1,6 @@
 import UIKit
+import IQKeyboardManagerSwift
 
-// TODO: add IQ keyboard
 final class UserViewControlller: UIViewController {
 	// - UI
 	private lazy var nameLabel = {
@@ -109,6 +109,16 @@ final class UserViewControlller: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		configure()
+	}
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		IQKeyboardManager.shared.isEnabled = true
+	}
+	
+	override func viewWillDisappear(_ animated: Bool) {
+		super.viewWillDisappear(animated)
+		IQKeyboardManager.shared.isEnabled = false
 	}
 }
 

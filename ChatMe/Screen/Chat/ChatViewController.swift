@@ -1,4 +1,5 @@
 import UIKit
+import IQKeyboardManagerSwift
 
 final class ChatViewController: UIViewController {
 	// - UI
@@ -58,6 +59,16 @@ final class ChatViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		configure()
+	}
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		IQKeyboardManager.shared.isEnabled = true
+	}
+	
+	override func viewWillDisappear(_ animated: Bool) {
+		super.viewWillDisappear(animated)
+		IQKeyboardManager.shared.isEnabled = false
 	}
 }
 
